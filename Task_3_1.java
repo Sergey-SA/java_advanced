@@ -9,7 +9,7 @@ public class Task_3_1 {
 
         Random r = new Random();
 
-        int maxNegInt = -11;
+        int maxNegInt = 0;
         int minPosInt = 11;
 
         // Заполнение массива случайными числами от -10 до 10
@@ -20,7 +20,7 @@ public class Task_3_1 {
         for(int i = 0; i < arrText.length; i++) {
 
             // поиск максимального отрицательного числа
-            if (maxNegInt < arrText[i] && arrText[i] < 0) {
+            if (maxNegInt > arrText[i] && arrText[i] < 0) {
                 maxNegInt = arrText[i];
             }
 
@@ -39,6 +39,5 @@ public class Task_3_1 {
                 arrText[i] = maxNegInt;
             }
         }
-
     }
 }
